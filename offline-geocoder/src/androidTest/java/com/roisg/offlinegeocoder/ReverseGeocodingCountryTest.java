@@ -1,6 +1,5 @@
 package com.roisg.offlinegeocoder;
 
-import android.os.AsyncTask;
 import android.test.InstrumentationTestCase;
 import android.util.Log;
 
@@ -57,5 +56,25 @@ public class ReverseGeocodingCountryTest extends InstrumentationTestCase {
         countryCode = reverseGeocodingCountry.getCountry(GeocodeKey.KEY_ISOA2, 1.324332, 103.676293);
         assertTrue(countryCode.equals("SG"));
         Log.d("ReverseGeocoding", "Country code is: " + countryCode);
+
+        //Ceuta
+        countryCode = reverseGeocodingCountry.getCountry(GeocodeKey.KEY_ISOA2, 35.8893874, -5.321345500000007);
+        assertTrue("ERROR - country code: "+countryCode, countryCode.equals("ES"));
+        Log.d("ReverseGeocoding", "Country code is (Ceuta): " + countryCode);
+
+        //Melilla
+        countryCode = reverseGeocodingCountry.getCountry(GeocodeKey.KEY_ISOA2, 35.2922775, -2.9380972999999813);
+        assertTrue(countryCode.equals("ES"));
+        Log.d("ReverseGeocoding", "Country code is (Melilla): " + countryCode);
+
+        //Tenerife
+        countryCode = reverseGeocodingCountry.getCountry(GeocodeKey.KEY_ISOA2, 28.2915637, -16.629130400000008);
+        assertTrue(countryCode.equals("ES"));
+        Log.d("ReverseGeocoding", "Country code is (Tenerife): " + countryCode);
+
+        //Mallorca
+        countryCode = reverseGeocodingCountry.getCountry(GeocodeKey.KEY_ISOA2, 39.6952629, 3.0175712000000203);
+        assertTrue(countryCode.equals("ES"));
+        Log.d("ReverseGeocoding", "Country code is (Mallorca): " + countryCode);
     }
 }
