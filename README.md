@@ -38,7 +38,7 @@ V 0.1.0
 - First release of the project
 
 V 0.1.1
-- Added Ceuta and Melilla as Spain locations
+- Added Ceuta and Melilla as spanish locations
 
 
 #### License 
