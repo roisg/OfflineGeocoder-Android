@@ -34,8 +34,11 @@ You may use any of those key to retrieve detail of the location.
 
 #### ChangeLog
 
-V 0.0.1
+V 0.1.0
 - First release of the project
+
+V 0.1.1
+- Added Ceuta and Melilla as Spain locations
 
 
 #### License 
